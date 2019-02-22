@@ -4,13 +4,12 @@ let main = document.querySelector("main");
 let msg = document.querySelector(".msg");
 
 function addSymbols(words){
-	let trimWords = words.trim();
-	let wordArr = trimWords.split("");
+	let wordArr = words.split("");
 	let newString = wordArr.join(" ");
 	return newString;
 };
 
-userWord.addEventListener("keydown", ()=>{
+userWord.addEventListener("input", ()=>{
 	let userText = userWord.value;
 	userText = addSymbols(userText);
 	msg.textContent = userText;
