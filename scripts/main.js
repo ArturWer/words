@@ -8,9 +8,9 @@ function addSymbols(words){
 	let finalWords = [];
 	wordsArr.forEach((word)=>{
 		let splitWordArr = word.split("");
-		finalWords.push(splitWordArr.join("  "));
+		finalWords.push(splitWordArr.join(" - "));
 	});
-	return finalWords.join("    *");
+	return finalWords.join("_ _ _");
 };
 
 userWord.addEventListener("input", ()=>{
