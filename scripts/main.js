@@ -4,9 +4,13 @@ let main = document.querySelector("main");
 let msg = document.querySelector(".msg");
 
 function addSymbols(words){
-	let wordArr = words.split("");
-	let newString = wordArr.join(" ");
-	return newString;
+	let wordsArr = words.split(" ");
+	let finalWords = [];
+	wordsArr.forEach((word)=>{
+		let splitWordArr = word.split("");
+		finalWords.push(splitWordArr.join("  "));
+	});
+	return finalWords.join("    *");
 };
 
 userWord.addEventListener("input", ()=>{
